@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+description = "A sample test package"
+authors = [
+  {name = "barbizu-"},
+  {email = "barbizu-@student.42malaga.com"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/belenarbizu/ft_package"

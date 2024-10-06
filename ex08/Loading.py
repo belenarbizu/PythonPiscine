@@ -1,4 +1,7 @@
 def ft_tqdm(lst: range)-> None:
+    """
+    This function behaves like the original tqdm function
+    """
     lenght = 143
     last = lst[-1] + 1
     for i in lst:
