@@ -13,7 +13,7 @@ def ft_load(path: str) -> str:
     except UnidentifiedImageError:
         raise SystemExit("Image can't be open and identified")
     except ValueError:
-        raise SystemExit("Error")
+        raise SystemExit("Can't read file")
     except TypeError:
         raise SystemExit("Format image is not correct")
 
