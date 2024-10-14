@@ -1,5 +1,6 @@
 import sys
 
+
 def print_text(char):
     """
     This function will print the output
@@ -12,13 +13,14 @@ def print_text(char):
     print(f"{char[5]} digits")
     pass
 
+
 def count_char(text):
     """
     This function counts the characters
     """
     characters = []
     characters.append(len(text))
-    for i in range(1,6):
+    for i in range(1, 6):
         characters.append(0)
     for i in range(0, len(text)):
         code = ord(text[i])
@@ -35,6 +37,7 @@ def count_char(text):
     print_text(characters)
     pass
 
+
 def main():
     if (len(sys.argv) < 2):
         print("What is the text to count?")
@@ -44,6 +47,7 @@ def main():
         print("AssertionError: more than one argument is provided")
     else:
         count_char(sys.argv[1])
+
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,4 @@
-#NO ENTREGAR!!!
+# NO ENTREGAR!!!
 
 from time import sleep
 from tqdm import tqdm

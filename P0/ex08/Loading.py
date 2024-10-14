@@ -1,4 +1,4 @@
-def ft_tqdm(lst: range)-> None:
+def ft_tqdm(lst: range) -> None:
     """
     This function behaves like the original tqdm function
     """
