@@ -1,6 +1,7 @@
 from PIL import Image, UnidentifiedImageError
 import numpy as np
 
+
 def ft_load(path: str) -> str:
     """
     Convert the image into an 8-bit numpy array and print the shape
