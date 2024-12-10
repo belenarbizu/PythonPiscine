@@ -30,23 +30,29 @@ def count_char(text):
             characters[2] += 1
         elif code >= 33 and code <= 47:
             characters[3] += 1
-        elif code == 32:
+        elif text[i] in " \t\n\r":
             characters[4] += 1
         elif code >= 48 and code <= 57:
             characters[5] += 1
+        else:
+            print (f"Unrecognized character {code}")
     print_text(characters)
     pass
 
 
 def main():
-    if (len(sys.argv) < 2):
-        print("What is the text to count?")
-        text = input()
-        count_char(text)
-    elif (len(sys.argv) > 2):
-        print("AssertionError: more than one argument is provided")
-    else:
-        count_char(sys.argv[1])
+    try:
+        if (len(sys.argv) < 2):
+            sys.stdout.write("What is the text to count?\n")
+            sys.stdout.flush()
+            text = sys.stdin.readline()
+            count_char(text)
+        elif (len(sys.argv) > 2):
+            raise AssertionError("more than one argument is provided")
+        else:
+            count_char(sys.argv[1])
+    except AssertionError as error:
+        print(AssertionError.__name__ + ":", error)
 
 
 if __name__ == "__main__":
