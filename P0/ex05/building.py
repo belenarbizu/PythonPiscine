@@ -34,8 +34,6 @@ def count_char(text):
             characters[4] += 1
         elif code >= 48 and code <= 57:
             characters[5] += 1
-        else:
-            print (f"Unrecognized character {code}")
     print_text(characters)
     pass
 
