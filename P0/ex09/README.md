@@ -1,5 +1,7 @@
-# Example Package
+# ft_package
 
-This is a simple example package. You can use
-[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+Run this command from the same directory where pyproject.toml is located:
+python3 -m build
+
+To install the package, run this command:
+pip intall ... (one of the files created in dist)

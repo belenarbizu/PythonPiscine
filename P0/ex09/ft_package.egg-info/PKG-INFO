@@ -5,7 +5,7 @@ Summary: A sample test package
 Author: barbizu-
 Author-email: barbizu-@student.42malaga.com
 License: MIT
-Project-URL: Homepage, https://github.com/belenarbizu/ft_package
+Project-URL: HomePage, https://github.com/belenarbizu/ft_package
 Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
