@@ -7,9 +7,18 @@ def check_error(family):
     and if it has lists on it
     """
     if not isinstance(family, list):
-        raise SystemExit("AssertionError: elements must be a list")
+        raise SystemExit("Error: elements must be a list")
     if not all(isinstance(x, list) for x in family):
-        raise SystemExit("AssertionError: elements must be a list")
+        raise SystemExit("Error: elements must be a list")
+    list_len = len(family[0])
+    for sublist in family:
+        if (len(sublist) != list_len):
+            raise SystemExit("Error: lists must have the same size")
+        for item in sublist:
+            try:
+                num = int(item)
+            except ValueError:
+                raise SystemExit("Error: elements must be ints")
 
 
 def slice_me(family: list, start: int, end: int) -> list:

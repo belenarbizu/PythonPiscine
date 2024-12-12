@@ -13,10 +13,10 @@ def check_error(height: list[int | float], weight: list[int | float]):
     Check if lists are correct
     """
     if (len(height) != len(weight)):
-        raise SystemExit("AssertionError: lists have to be the same size")
+        raise SystemExit("Error: lists have to be the same size")
     if not (all(isinstance(x, (int, float)) for x in height)
             and all(isinstance(x, (int, float)) for x in weight)):
-        raise SystemExit("AssertionError: elements must be int or float")
+        raise SystemExit("Error: elements must be int or float")
 
 
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
@@ -32,7 +32,7 @@ def check_error_limit(bmi: list[int | float]):
     Check int and float error for the bmi list
     """
     if not all(isinstance(x, (int, float)) for x in bmi):
-        raise SystemExit("AssertionError: elements must be int or float")
+        raise SystemExit("Error: elements must be int or float")
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
