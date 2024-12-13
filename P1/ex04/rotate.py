@@ -5,14 +5,17 @@ import numpy as np
 
 def rotate(path):
     try:
-        print(ft_load(path))
-        img = cv2.imread(path)
-        img_zoom = img[100:500, 150:550]
-        #Cambio la imagen RGB de 3 canales a un solo canal (400,400)
-        img_gray = cv2.cvtColor(img_zoom, cv2.COLOR_RGB2GRAY)
-        print("New shape after Transpose:", img_gray.shape)
-        print(img_gray)
-        cv2.imshow('Imagen de entrada', img_gray)
+        img = ft_load(path)
+        print(img)
+        rows = len(img)
+        columns = len(img[0])
+        transposed = np.zeros((columns, rows))
+        for x in range(rows):
+            for y in range(columns):
+                transposed[x][y] = img[x][y]
+        print("New shape after Transpose:", img.shape)
+        print(transposed)
+        cv2.imshow('Imagen de entrada', transposed)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
     except Exception as e:

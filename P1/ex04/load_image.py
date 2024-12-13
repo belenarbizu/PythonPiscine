@@ -26,4 +26,4 @@ def ft_load(path: str) -> str:
     #Expandimos un canal adicional (400,400,1)
     img_gray_expanded = np.expand_dims(img_gray, axis=-1) 
     print("The shape of image is:", img_gray_expanded.shape)
-    return str(img_gray_expanded)
+    return img_gray_expanded
