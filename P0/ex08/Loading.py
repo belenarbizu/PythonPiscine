@@ -2,7 +2,7 @@ def ft_tqdm(lst: range) -> None:
     """
     This function behaves like the original tqdm function
     """
-    lenght = 143
+    lenght = 155
     last = lst[-1] + 1
     for i in lst:
         percentage = i * 100 / last

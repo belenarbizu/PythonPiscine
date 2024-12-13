@@ -16,22 +16,29 @@ def check_input(string, number):
     """
     This functions check if the argvs are correct
     """
-    if (isinstance(string, str)):
-        try:
-            num = int(number)
-        except ValueError:
-            print("AssertionError: the arguments are bad")
+    try:
+        if (isinstance(string, str)):
+            try:
+                num = int(number)
+            except ValueError:
+                raise AssertionError("the arguments are bad")
+                sys.exit(1)
+            output_list(string, num)
+        else:
+            raise AssertionError("the arguments are bad")
             sys.exit(1)
-        output_list(string, num)
-    else:
-        print("AssertionError: the arguments are bad")
+    except AssertionError as error:
+        print(AssertionError.__name__ + ":", error)
 
 
 def main():
-    if (len(sys.argv) != 3):
-        print("AssertionError: the arguments are bad")
-    else:
-        check_input(sys.argv[1], sys.argv[2])
+    try:
+        if (len(sys.argv) != 3):
+            raise AssertionError("the arguments are bad")
+        else:
+            check_input(sys.argv[1], sys.argv[2])
+    except AssertionError as error:
+        print(AssertionError.__name__ + ":", error)
 
 
 if __name__ == "__main__":

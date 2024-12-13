@@ -2,9 +2,10 @@ from load_image import ft_load
 import cv2
 import numpy as np
 
+
 def zoom(path):
     try:
-    º   print(ft_load(path))
+        print(ft_load(path))
         img = cv2.imread(path)
         img_zoom = img[100:500, 150:550]
         #Cambio la imagen RGB de 3 canales a un solo canal (400,400)

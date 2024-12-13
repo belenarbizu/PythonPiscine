@@ -13,7 +13,7 @@ tuple_to_list.pop()
 tuple_to_list.append("Spain!")
 ft_tuple = tuple(tuple_to_list)
 
-#ft_set, añade Maálga en el orden que quiere porque los sets no tienen orden
+#ft_set, añade Málaga en el orden que quiere porque los sets no tienen orden
 ft_set.remove("tutu!")
 ft_set.add("Málaga!")
 
