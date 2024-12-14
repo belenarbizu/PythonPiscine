@@ -20,7 +20,7 @@ def ft_load(path: str) -> str:
         raise SystemExit("Format image is not correct")
 
     img = np.asarray(im)
-    img_zoom = img[100:500, 150:550]
+    img_zoom = img[100:500, 400:800]
     #Cambio la imagen RGB de 3 canales a un solo canal (400,400)
     img_gray = cv2.cvtColor(img_zoom, cv2.COLOR_RGB2GRAY)
     #Expandimos un canal adicional (400,400,1)
