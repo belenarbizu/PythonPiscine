@@ -16,3 +16,10 @@ def country_info(path: str) -> None:
     plt.title("Spain Life expectancy Projections")
 
     plt.show()
+
+def main():
+    country_info("life_expectancy_years.csv")
+
+
+if __name__ == "__main__":
+    main()
