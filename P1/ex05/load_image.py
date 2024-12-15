@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-def ft_load(path: str) -> str:
+def ft_load(path: str) -> np.ndarray:
     """
     Convert the image into an 8-bit numpy array and print the shape
     and its pixels content in RGB format
@@ -22,4 +22,4 @@ def ft_load(path: str) -> str:
     img = np.asarray(im)
     print("The shape of image is:", img.shape)
     print(img)
-    return str(img)
+    return img
