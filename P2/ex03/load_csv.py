@@ -1,7 +1,8 @@
 import pandas as pd
 from pandas.errors import EmptyDataError, ParserError
 
-def load(path: str)-> pd.DataFrame:
+
+def load(path: str) -> pd.DataFrame:
     try:
         dataset = pd.read_csv(path)
         return dataset
