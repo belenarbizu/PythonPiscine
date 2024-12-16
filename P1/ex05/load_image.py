@@ -1,4 +1,3 @@
-from PIL import Image, UnidentifiedImageError
 import numpy as np
 import cv2
 
@@ -9,11 +8,9 @@ def ft_load(path: str) -> np.ndarray:
     and its pixels content in RGB format
     """
     try:
-        im = Image.open(path)
+        im = cv2.imread(path)
     except FileNotFoundError:
         raise SystemExit("File not found")
-    except UnidentifiedImageError:
-        raise SystemExit("Image can't be open and identified")
     except ValueError:
         raise SystemExit("Can't read file")
     except TypeError:
@@ -22,4 +19,5 @@ def ft_load(path: str) -> np.ndarray:
     img = np.asarray(im)
     print("The shape of image is:", img.shape)
     print(img)
-    return img
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    return img_rgb

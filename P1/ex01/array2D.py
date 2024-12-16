@@ -16,7 +16,7 @@ def check_error(family):
             raise SystemExit("Error: lists must have the same size")
         for item in sublist:
             try:
-                num = int(item)
+                int(item)
             except ValueError:
                 raise SystemExit("Error: elements must be ints")
 
