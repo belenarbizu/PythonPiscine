@@ -4,6 +4,9 @@ import numpy as np
 
 
 def zoom(path):
+    """
+    Loads the image, zoom it and changes the color to grey
+    """
     try:
         print(ft_load(path))
         img = cv2.imread(path)

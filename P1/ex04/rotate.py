@@ -4,6 +4,9 @@ import numpy as np
 
 
 def rotate(path):
+    """
+    Load the image and rotate it
+    """
     try:
         img = ft_load(path)
         print(img)

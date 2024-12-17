@@ -19,7 +19,8 @@ def check_error(height: list[int | float], weight: list[int | float]):
         raise SystemExit("Error: elements must be int or float")
 
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float], weight: list[int | float])\
+        -> list[int | float]:
     """
     Creates the list with the bmi data and return it
     """
