@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 
 
 def population_life() -> None:
+    """
+    Show a grapich with life expectancy years
+    and income per person of all countrys in 1900
+    """
     life_df = load("life_expectancy_years.csv")
     inm_df = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
 

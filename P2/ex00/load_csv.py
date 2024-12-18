@@ -3,6 +3,9 @@ from pandas.errors import EmptyDataError, ParserError
 
 
 def load(path: str) -> pd.DataFrame:
+    """
+    Load the csv and print dimensions of it
+    """
     try:
         dataset = pd.read_csv(path)
         print("Loading dataset of dimensions", dataset.shape)

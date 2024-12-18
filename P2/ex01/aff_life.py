@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 
 
 def country_info(path: str) -> None:
+    """
+    Shows the graphic of Spain life expectancy years
+    """
     dataset = load(path)
 
     # filter spain row

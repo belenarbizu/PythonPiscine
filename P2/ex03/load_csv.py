@@ -3,6 +3,9 @@ from pandas.errors import EmptyDataError, ParserError
 
 
 def load(path: str) -> pd.DataFrame:
+    """
+    Load the csv
+    """
     try:
         dataset = pd.read_csv(path)
         return dataset
