@@ -1,13 +1,18 @@
 from load_csv import load
 import matplotlib.pyplot as plt
 
+
 def change_format_data(value) -> float:
+    """
+    Changes csv values with M and k format
+    """
     if isinstance(value, str):
         if value.endswith("M"):
             return float(value[:-1]) * 1e6
         if value.endswith("k"):
             return float(value[:-1]) * 1e3
     return float(value)
+
 
 def population_info(path: str) -> None:
     """
@@ -28,7 +33,7 @@ def population_info(path: str) -> None:
 
     plt.plot(years, values_spain, label="Spain")
     plt.plot(years, values_france, label="France")
-    plt.yticks(["20M", "40M", "60M"])
+    plt.yticks([20e6, 40e6, 60e6], ["20M", "40M", "60M"])
     plt.xticks(years[::40])
     plt.xlabel("Year")
     plt.ylabel("Population")
