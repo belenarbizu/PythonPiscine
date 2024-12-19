@@ -5,7 +5,7 @@ class Baratheon(Character):
     """
     Representing the Baratheon family.
     """
-    def __init__(self, first_name, is_alive=True, family_name="Baratheon", eyes="brown", hairs="dark"):
+    def __init__(self, first_name, is_alive=True):
         """
         Init stark class
         name mandatory
@@ -34,7 +34,7 @@ class Lannister(Character):
     """
     Representing the Lannister family.
     """
-    def __init__(self, first_name, is_alive=True, family_name="Lannister", eyes="blue", hairs="light"):
+    def __init__(self, first_name, is_alive=True):
         """
         Init stark class
         name mandatory
@@ -57,7 +57,6 @@ class Lannister(Character):
         Changes is_alive value from True to False
         """
         self.is_alive = False
-
 
     def create_lannister(first_name, is_alive):
         """

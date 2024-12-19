@@ -5,22 +5,57 @@ def mean(args):
     result = sum_arg / len(args)
     print("mean :", result)
 
+def bubbleSort(args):
+    sorted_num = list(args)
+    sorting = True
+    while sorting:
+        sorting = False
+        for i in range(len(sorted_num) - 1):
+            if sorted_num[i] > sorted_num[i + 1]:
+                sorted_num[i], sorted_num[i + 1] = sorted_num[i + 1], sorted_num[i]
+                sorting = True
+    return tuple(sorted_num)
+
 def median(args):
-    # median
-    print("median")
+    sorted_num = bubbleSort(args)
+    if len(sorted_num) % 2 == 0:
+        num_1 = sorted_num[int(len(sorted_num) / 2) - 1]
+        num_2 = sorted_num[int(len(sorted_num) / 2)]
+        median = (num_1 + num_2) / 2
+    else:
+        median = sorted_num[int(len(sorted_num) / 2)]
+    print("median :", median)
 
 def quartile(args):
-    # quartile 25
-    # quartile 75
-    print("quartile")
+    sorted_num = bubbleSort(args)
+    quartile = [0.0, 0.0]
+    first = len(args) / 4
+    last = 3 * len(args) / 4
+    quartile[0] = float(sorted_num[int(first)])
+    quartile[1] = float(sorted_num[int(last)])
+    print("quartile :", quartile)
 
 def std(args):
-    # std
-    print("std")
+    sum_arg = 0.0
+    for arg in args:
+        sum_arg += arg
+    mean = sum_arg / len(args)
+    std = 0.0
+    for arg in args:
+        std += (arg - mean) ** 2
+    std = (std / len(args)) ** 0.5
+    print("std :", std)
 
 def var(args):
-    # var
-    print("var")
+    sum_arg = 0.0
+    for arg in args:
+        sum_arg += arg
+    mean = sum_arg / len(args)
+    var = 0.0
+    for arg in args:
+        var += (arg - mean) ** 2
+    var = var / len(args)
+    print("var :", var)
 
 def ft_statistics(*args: any, **kwargs: any)-> None:
     stats = ["mean", "median", "quartile", "std", "var"]

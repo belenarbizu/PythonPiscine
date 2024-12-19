@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class Character(ABC):
     """
-    Abstract class
+    Abstract class Character
     """
     @abstractmethod
     def __init__(self, name):
@@ -16,7 +16,7 @@ class Character(ABC):
 
 class Stark(Character):
     """
-    Inherits from Character
+    Stark class, inherits from Character
     """
     def __init__(self, name, is_alive=True):
         """
