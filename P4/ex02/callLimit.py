@@ -3,10 +3,12 @@ def callLimit(limit: int):
     Receives a limit and returns a decorator
     """
     count = 0
+
     def callLimiter(function):
         """
         Receives a function and returns a wrapper
         """
+
         def limit_function(*args: any, **kwds: any):
             """
             Wrapper that receives the args.
